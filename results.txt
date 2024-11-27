@@ -1,0 +1,303 @@
+Memory Allocation Test
+Command-line input: "./memtest.c"
+
+[0] Allocating size: 54
+[0] Allocated and filled: 'Now is the time for all good people to come to the ai'
+[0] Randomly freeing 0x100250018 ('Now is the time for all good people to come to the ai')
+[0] Freed 0x100250018
+[1] Allocating size: 63
+[1] Allocated and filled: 'Now is the time for all good people to come to the aid of thei'
+[2] Allocating large chunk of size: 955733
+[2] Allocated and filled: 'Now is the time for all good people to come to the aid of their country.'
+[3] Allocating size: 4
+[3] Allocated and filled: 'Now'
+[3] Randomly freeing 0x100339630 ('Now')
+[3] Freed 0x100339630
+[4] Allocating size: 5
+[4] Allocated and filled: 'Now '
+[5] Allocating size: 45
+[5] Allocated and filled: 'Now is the time for all good people to come '
+[5] Reallocating to new size: 840842
+[5] Reallocated and updated: 'Now is the time for all good people to come to the aid of their country.'
+[2] Randomly freeing 0x1002500c0 ('Now is the time for all good people to come to the aid of their country.')
+[2] Freed 0x1002500c0
+[6] Allocating size: 39
+[6] Allocated and filled: 'Now is the time for all good people to'
+[7] Allocating size: 33
+[7] Allocated and filled: 'Now is the time for all good peo'
+[7] Randomly freeing 0x100406ba0 ('Now is the time for all good peo')
+[7] Freed 0x100406ba0
+[8] Allocating size: 23
+[8] Allocated and filled: 'Now is the time for al'
+[9] Allocating large chunk of size: 8789
+[9] Allocated and filled: 'Now is the time for all good people to come to the aid of their country.'
+[10] Allocating size: 54
+[10] Allocated and filled: 'Now is the time for all good people to come to the ai'
+[5] Randomly freeing 0x1003396b8 ('Now is the time for all good people to come to the aid of their country.')
+[5] Freed 0x1003396b8
+[11] Allocating size: 8
+[11] Allocated and filled: 'Now is '
+[9] Randomly freeing 0x100406c10 ('Now is the time for all good people to come to the aid of their country.')
+[9] Freed 0x100406c10
+[12] Allocating size: 9
+[12] Allocated and filled: 'Now is t'
+[13] Allocating size: 39
+[13] Allocated and filled: 'Now is the time for all good people to'
+[13] Reallocating to new size: 34
+[13] Reallocated and updated: 'Now is the time for all good peop'
+[8] Randomly freeing 0x100406be0 ('Now is the time for al')
+[8] Freed 0x100406be0
+[14] Allocating size: 31
+[14] Allocated and filled: 'Now is the time for all good p'
+[14] Reallocating to new size: 7
+[14] Reallocated and updated: 'Now is'
+[15] Allocating size: 62
+[15] Allocated and filled: 'Now is the time for all good people to come to the aid of the'
+[1] Randomly freeing 0x100250068 ('Now is the time for all good people to come to the aid of thei')
+[1] Freed 0x100250068
+[16] Allocating size: 73
+[16] Allocated and filled: 'Now is the time for all good people to come to the aid of their country.'
+[16] Reallocating to new size: 43
+[16] Reallocated and updated: 'Now is the time for all good people to com'
+[17] Allocating size: 12
+[17] Allocated and filled: 'Now is the '
+[10] Randomly freeing 0x100408e80 ('Now is the time for all good people to come to the ai')
+[10] Freed 0x100408e80
+[18] Allocating large chunk of size: 129743
+[18] Allocated and filled: 'Now is the time for all good people to come to the aid of their country.'
+[19] Allocating size: 19
+[19] Allocated and filled: 'Now is the time fo'
+[6] Randomly freeing 0x100406b60 ('Now is the time for all good people to')
+[6] Freed 0x100406b60
+[20] Allocating size: 34
+[20] Allocated and filled: 'Now is the time for all good peop'
+[21] Allocating large chunk of size: 649600
+[21] Allocated and filled: 'Now is the time for all good people to come to the aid of their country.'
+[21] Reallocating to new size: 43
+[21] Reallocated and updated: 'Now is the time for all good people to com'
+[13] Randomly freeing 0x100408f18 ('Now is the time for all good peop')
+[13] Freed 0x100408f18
+[22] Allocating size: 37
+[22] Allocated and filled: 'Now is the time for all good people '
+[23] Allocating size: 24
+[23] Allocated and filled: 'Now is the time for all'
+[24] Allocating size: 25
+[24] Allocated and filled: 'Now is the time for all '
+[24] Reallocating to new size: 2
+[24] Reallocated and updated: 'N'
+[25] Allocating size: 39
+[25] Allocated and filled: 'Now is the time for all good people to'
+[22] Randomly freeing 0x1004c7568 ('Now is the time for all good people ')
+[22] Freed 0x1004c7568
+[26] Allocating large chunk of size: 1029323
+[26] Allocated and filled: 'Now is the time for all good people to come to the aid of their country.'
+[20] Randomly freeing 0x100428b90 ('Now is the time for all good peop')
+[20] Freed 0x100428b90
+[27] Allocating size: 38
+[27] Allocated and filled: 'Now is the time for all good people t'
+[28] Allocating size: 42
+[28] Allocated and filled: 'Now is the time for all good people to co'
+[14] Randomly freeing 0x100408f58 ('Now is')
+[14] Freed 0x100408f58
+[29] Allocating size: 67
+[29] Allocated and filled: 'Now is the time for all good people to come to the aid of their co'
+[21] Randomly freeing 0x100428bd0 ('Now is the time for all good people to com')
+[21] Freed 0x100428bd0
+[0] Already freed
+[1] Already freed
+[2] Already freed
+[3] Already freed
+[4] Freeing 0x100339650 ('Now ')
+[4] Freed 0x100339650
+[5] Already freed
+[6] Already freed
+[7] Already freed
+[8] Already freed
+[9] Already freed
+[10] Already freed
+[11] Freeing 0x100408ed0 ('Now is ')
+[11] Freed 0x100408ed0
+[12] Freeing 0x100408ef0 ('Now is t')
+[12] Freed 0x100408ef0
+[13] Already freed
+[14] Already freed
+[15] Freeing 0x100408f90 ('Now is the time for all good people to come to the aid of the')
+[15] Freed 0x100408f90
+[16] Freeing 0x100408fe8 ('Now is the time for all good people to com')
+[16] Freed 0x100408fe8
+[17] Freeing 0x100409050 ('Now is the ')
+[17] Freed 0x100409050
+[18] Freeing 0x100409078 ('Now is the time for all good people to come to the aid of their country.')
+[18] Freed 0x100409078
+[19] Freeing 0x100428b60 ('Now is the time fo')
+[19] Freed 0x100428b60
+[20] Already freed
+[21] Already freed
+[22] Already freed
+[23] Freeing 0x1004c75a8 ('Now is the time for all')
+[23] Freed 0x1004c75a8
+[24] Freeing 0x1004c75d8 ('N')
+[24] Freed 0x1004c75d8
+[25] Freeing 0x1004c7610 ('Now is the time for all good people to')
+[25] Freed 0x1004c7610
+[26] Freeing 0x1004c7650 ('Now is the time for all good people to come to the aid of their country.')
+[26] Freed 0x1004c7650
+[27] Freeing 0x1005c2b38 ('Now is the time for all good people t')
+[27] Freed 0x1005c2b38
+[28] Freeing 0x1005c2b78 ('Now is the time for all good people to co')
+[28] Freed 0x1005c2b78
+[29] Freeing 0x1005c2bc0 ('Now is the time for all good people to come to the aid of their co')
+[29] Freed 0x1005c2bc0
+
+--------------------------------------------------
+
+Memory Allocation Test
+Command-line input: "./memtest.c Custom test string for allocation testing!"
+
+[0] Allocating size: 40
+[0] Allocated and filled: 'Custom test string for allocation testi'
+[0] Randomly freeing 0x1042e8018 ('Custom test string for allocation testi')
+[0] Freed 0x1042e8018
+[1] Allocating size: 42
+[1] Allocated and filled: 'Custom test string for allocation testing'
+[2] Allocating large chunk of size: 955733
+[2] Allocated and filled: 'Custom test string for allocation testing!'
+[3] Allocating size: 36
+[3] Allocated and filled: 'Custom test string for allocation t'
+[3] Randomly freeing 0x1043d1610 ('Custom test string for allocation t')
+[3] Freed 0x1043d1610
+[4] Allocating size: 36
+[4] Allocated and filled: 'Custom test string for allocation t'
+[5] Allocating size: 32
+[5] Allocated and filled: 'Custom test string for allocati'
+[5] Reallocating to new size: 840842
+[5] Reallocated and updated: 'Custom test string for allocation testing!'
+[2] Randomly freeing 0x1042e80a0 ('Custom test string for allocation testing!')
+[2] Freed 0x1042e80a0
+[6] Allocating size: 40
+[6] Allocated and filled: 'Custom test string for allocation testi'
+[7] Allocating size: 22
+[7] Allocated and filled: 'Custom test string fo'
+[7] Randomly freeing 0x10449ebb0 ('Custom test string fo')
+[7] Freed 0x10449ebb0
+[8] Allocating size: 3
+[8] Allocated and filled: 'Cu'
+[9] Allocating large chunk of size: 8789
+[9] Allocated and filled: 'Custom test string for allocation testing!'
+[10] Allocating size: 26
+[10] Allocated and filled: 'Custom test string for al'
+[5] Randomly freeing 0x1043d16c8 ('Custom test string for allocation testing!')
+[5] Freed 0x1043d16c8
+[11] Allocating size: 8
+[11] Allocated and filled: 'Custom '
+[9] Randomly freeing 0x10449ec00 ('Custom test string for allocation testing!')
+[9] Freed 0x10449ec00
+[12] Allocating size: 10
+[12] Allocated and filled: 'Custom te'
+[13] Allocating size: 27
+[13] Allocated and filled: 'Custom test string for all'
+[13] Reallocating to new size: 20
+[13] Reallocated and updated: 'Custom test string '
+[8] Randomly freeing 0x10449ebe0 ('Cu')
+[8] Freed 0x10449ebe0
+[14] Allocating size: 18
+[14] Allocated and filled: 'Custom test strin'
+[14] Reallocating to new size: 31
+[14] Reallocated and updated: 'Custom test string for allocat'
+[15] Allocating size: 7
+[15] Allocated and filled: 'Custom'
+[1] Randomly freeing 0x1042e8058 ('Custom test string for allocation testing')
+[1] Freed 0x1042e8058
+[16] Allocating size: 38
+[16] Allocated and filled: 'Custom test string for allocation tes'
+[16] Reallocating to new size: 11
+[16] Reallocated and updated: 'Custom tes'
+[17] Allocating size: 13
+[17] Allocated and filled: 'Custom test '
+[10] Randomly freeing 0x1044a0e70 ('Custom test string for al')
+[10] Freed 0x1044a0e70
+[18] Allocating large chunk of size: 129743
+[18] Allocated and filled: 'Custom test string for allocation testing!'
+[19] Allocating size: 11
+[19] Allocated and filled: 'Custom tes'
+[6] Randomly freeing 0x10449eb70 ('Custom test string for allocation testi')
+[6] Freed 0x10449eb70
+[20] Allocating size: 23
+[20] Allocated and filled: 'Custom test string for'
+[21] Allocating large chunk of size: 649600
+[21] Allocated and filled: 'Custom test string for allocation testing!'
+[21] Reallocating to new size: 31
+[21] Reallocated and updated: 'Custom test string for allocat'
+[13] Randomly freeing 0x1044a0ef0 ('Custom test string ')
+[13] Freed 0x1044a0ef0
+[22] Allocating size: 26
+[22] Allocated and filled: 'Custom test string for al'
+[23] Allocating size: 11
+[23] Allocated and filled: 'Custom tes'
+[24] Allocating size: 13
+[24] Allocated and filled: 'Custom test '
+[24] Reallocating to new size: 30
+[24] Reallocated and updated: 'Custom test string for alloca'
+[25] Allocating size: 42
+[25] Allocated and filled: 'Custom test string for allocation testing'
+[22] Randomly freeing 0x10455f4f0 ('Custom test string for al')
+[22] Freed 0x10455f4f0
+[26] Allocating large chunk of size: 1029323
+[26] Allocated and filled: 'Custom test string for allocation testing!'
+[20] Randomly freeing 0x1044c0b28 ('Custom test string for')
+[20] Freed 0x1044c0b28
+[27] Allocating size: 10
+[27] Allocated and filled: 'Custom te'
+[28] Allocating size: 8
+[28] Allocated and filled: 'Custom '
+[14] Randomly freeing 0x1044a0f58 ('Custom test string for allocat')
+[14] Freed 0x1044a0f58
+[29] Allocating size: 25
+[29] Allocated and filled: 'Custom test string for a'
+[21] Randomly freeing 0x1044c0b58 ('Custom test string for allocat')
+[21] Freed 0x1044c0b58
+[0] Already freed
+[1] Already freed
+[2] Already freed
+[3] Already freed
+[4] Freeing 0x1043d1650 ('Custom test string for allocation t')
+[4] Freed 0x1043d1650
+[5] Already freed
+[6] Already freed
+[7] Already freed
+[8] Already freed
+[9] Already freed
+[10] Already freed
+[11] Freeing 0x1044a0ea8 ('Custom ')
+[11] Freed 0x1044a0ea8
+[12] Freeing 0x1044a0ec8 ('Custom te')
+[12] Freed 0x1044a0ec8
+[13] Already freed
+[14] Already freed
+[15] Freeing 0x1044a0f90 ('Custom')
+[15] Freed 0x1044a0f90
+[16] Freeing 0x1044a0fb0 ('Custom tes')
+[16] Freed 0x1044a0fb0
+[17] Freeing 0x1044a0ff0 ('Custom test ')
+[17] Freed 0x1044a0ff0
+[18] Freeing 0x1044a1018 ('Custom test string for allocation testing!')
+[18] Freed 0x1044a1018
+[19] Freeing 0x1044c0b00 ('Custom tes')
+[19] Freed 0x1044c0b00
+[20] Already freed
+[21] Already freed
+[22] Already freed
+[23] Freeing 0x10455f528 ('Custom tes')
+[23] Freed 0x10455f528
+[24] Freeing 0x10455f578 ('Custom test string for alloca')
+[24] Freed 0x10455f578
+[25] Freeing 0x10455f5b0 ('Custom test string for allocation testing')
+[25] Freed 0x10455f5b0
+[26] Freeing 0x10455f5f8 ('Custom test string for allocation testing!')
+[26] Freed 0x10455f5f8
+[27] Freeing 0x10465aae0 ('Custom te')
+[27] Freed 0x10465aae0
+[28] Freeing 0x10465ab08 ('Custom ')
+[28] Freed 0x10465ab08
+[29] Freeing 0x10465ab28 ('Custom test string for a')
+[29] Freed 0x10465ab28

@@ -1,8 +1,9 @@
 #include "malloc.h"
-#include <unistd.h>
+
 #include <pthread.h>
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
+#include <unistd.h>
 
 #define BLOCK_SIZE sizeof(BlockHeader)
 #define ALIGNMENT 8
@@ -23,7 +24,7 @@ static size_t align_size(size_t size) {
 // Function to allocate a chunk of memory using sbrk
 void* get_me_blocks(size_t size) {
     void* block = sbrk(size);
-    if (block == (void*)-1) {
+    if (block == (void*) -1) {
         perror("sbrk failed");
         return NULL;
     }
@@ -36,7 +37,7 @@ static BlockHeader* extend_heap(size_t size) {
     if (!block) {
         return NULL;
     }
-    BlockHeader* header = (BlockHeader*)block;
+    BlockHeader* header = (BlockHeader*) block;
     header->size = size;
     header->free = 0;
     header->next = NULL;
@@ -55,9 +56,10 @@ static BlockHeader* find_free_block(size_t size) {
 }
 
 static void split_block(BlockHeader* block, size_t size) {
-    if (block->size <= size + BLOCK_SIZE) return;
+    if (block->size <= size + BLOCK_SIZE)
+        return;
 
-    BlockHeader* new_block = (BlockHeader*)((char*)block + BLOCK_SIZE + size);
+    BlockHeader* new_block = (BlockHeader*) ((char*) block + BLOCK_SIZE + size);
     new_block->size = block->size - size - BLOCK_SIZE;
     new_block->free = 1;
     new_block->next = block->next;
@@ -84,25 +86,28 @@ void* my_malloc(size_t size) {
     }
 
     pthread_mutex_unlock(&malloc_mutex);
-    return (void*)(block + 1);
+    return (void*) (block + 1);
 }
 
 void my_free(void* ptr) {
-    if (!ptr) return;
+    if (!ptr)
+        return;
 
     pthread_mutex_lock(&malloc_mutex);
 
-    BlockHeader* block = (BlockHeader*)ptr - 1;
+    BlockHeader* block = (BlockHeader*) ptr - 1;
     block->free = 1;
 
     pthread_mutex_unlock(&malloc_mutex);
 }
 
 void* my_realloc(void* ptr, size_t size) {
-    if (!ptr) return my_malloc(size);
+    if (!ptr)
+        return my_malloc(size);
 
-    BlockHeader* block = (BlockHeader*)ptr - 1;
-    if (block->size >= size) return ptr;
+    BlockHeader* block = (BlockHeader*) ptr - 1;
+    if (block->size >= size)
+        return ptr;
 
     void* new_ptr = my_malloc(size);
     if (new_ptr) {

@@ -3,7 +3,6 @@
 #include <string.h>
 #include <time.h>
 
-
 #ifdef SYSTEM_MALLOC
 #define xfree free
 #define xmalloc malloc
@@ -20,17 +19,18 @@ int rand_between(int min, int max) { return rand() % (max - min + 1) + min; }
 
 #define MIN(a, b) ((a) < (b) ? (a) : (b))
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
     srand(time(NULL));
 
-    char *test_string = "Now is the time for all good people to come to the aid "
-                        "of their country.";
+    char* test_string =
+        "Now is the time for all good people to come to the aid "
+        "of their country.";
 
     if (argc > 1) {
         test_string = argv[1];
     }
 
-    char *ptrs[TEST_SIZE];
+    char* ptrs[TEST_SIZE];
     memset(ptrs, 0, sizeof(ptrs));  // Initialize the pointer array to NULL
 
     for (int ix = 0; ix < TEST_SIZE; ix++) {
@@ -38,8 +38,10 @@ int main(int argc, char *argv[]) {
 
         // Occasionally allocate large chunks
         if (rand_between(1, 100) <= LARGE_ALLOC_PROBABILITY) {
-            size = rand_between(1024, 1024 * 1024); // Allocate between 1KB and 1MB
-            fprintf(stderr, "[%d] Allocating large chunk of size: %d\n", ix, size);
+            size = rand_between(1024,
+                                1024 * 1024);  // Allocate between 1KB and 1MB
+            fprintf(stderr, "[%d] Allocating large chunk of size: %d\n", ix,
+                    size);
         } else {
             size = rand_between(1, strlen(test_string) + 1);
             fprintf(stderr, "[%d] Allocating size: %d\n", ix, size);
@@ -61,11 +63,13 @@ int main(int argc, char *argv[]) {
         if (rand_between(1, 100) <= REALLOC_PROBABILITY) {
             int new_size = rand_between(1, strlen(test_string) + 1);
             if (rand_between(1, 100) <= LARGE_ALLOC_PROBABILITY) {
-                new_size = rand_between(1024, 1024 * 1024); // Reallocate large buffer
+                new_size =
+                    rand_between(1024, 1024 * 1024);  // Reallocate large buffer
             }
-            fprintf(stderr, "[%d] Reallocating to new size: %d\n", ix, new_size);
+            fprintf(stderr, "[%d] Reallocating to new size: %d\n", ix,
+                    new_size);
 
-            char *new_ptr = xrealloc(ptrs[ix], new_size);
+            char* new_ptr = xrealloc(ptrs[ix], new_size);
             if (new_ptr == NULL) {
                 fprintf(stderr, "[%d] realloc failed\n", ix);
                 exit(1);
@@ -76,7 +80,8 @@ int main(int argc, char *argv[]) {
             strncpy(ptrs[ix], test_string, len_to_copy);
             ptrs[ix][len_to_copy] = '\0';
 
-            fprintf(stderr, "[%d] Reallocated and updated: '%s'\n", ix, ptrs[ix]);
+            fprintf(stderr, "[%d] Reallocated and updated: '%s'\n", ix,
+                    ptrs[ix]);
         }
 
         // Randomly free one of the earlier allocated blocks
@@ -85,7 +90,8 @@ int main(int argc, char *argv[]) {
             fprintf(stderr, "[%d] Randomly freeing %p ('%s')\n", index_to_free,
                     ptrs[index_to_free], ptrs[index_to_free]);
             xfree(ptrs[index_to_free]);
-            fprintf(stderr, "[%d] Freed %p\n", index_to_free, ptrs[index_to_free]);
+            fprintf(stderr, "[%d] Freed %p\n", index_to_free,
+                    ptrs[index_to_free]);
             ptrs[index_to_free] = NULL;
         }
     }
